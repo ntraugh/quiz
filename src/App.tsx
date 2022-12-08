@@ -1,9 +1,29 @@
 import React from 'react';
+import Questions from './components/Questions';
 
-function App() {
+const App = () => {
+  const startTrivia = async () => {
+    console.log("started")
+  } 
+
+  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
+
+
+  }
+
+  const goToNextQuestion = () => {
+
+
+  }
+
   return (
     <div>
-      <p>Hello</p>
+      <h1>React Quiz</h1>
+      <button className="start" onClick={startTrivia}>Start</button>
+      <p className='score'>Score:</p>
+      <p>Loading Questions....</p>
+      <Questions/>
+      <button onClick={goToNextQuestion}>Next</button>
     </div>
   );
 }
